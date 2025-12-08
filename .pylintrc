@@ -2,6 +2,7 @@
 disable = missing-function-docstring,
           missing-module-docstring,
           missing-class-docstring,
+          missing-docstring,
           line-too-long,
           invalid-name,
           too-few-public-methods-init,

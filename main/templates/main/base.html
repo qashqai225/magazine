@@ -15,13 +15,13 @@
     <link rel="icon" type="image/png" sizes="32x32" href="{% static 'deps/favicon/favicon-32x32.png' %}">
     <link rel="icon" type="image/png" sizes="16x16" href="{% static 'deps/favicon/favicon-16x16.png' %}">
 
-    <title>Мій магазин</title>
+    <title>{{ title }} </title>
 </head>
 <body>
     <header>
         <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
             <div class="container">
-                <a class="navbar-brand" href="index.html">Головна</a>
+                <a class="navbar-brand" href="{% url "main:index" %}">Головна</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -37,7 +37,7 @@
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item  text-white" href="#">Доставка и оплата</a></li>
                                 <li><a class="dropdown-item  text-white" href="#">Контактна інформація</a></li>
-                                <li><a class="dropdown-item  text-white" href="#">Про нас</a></li>
+                                <li><a class="dropdown-item  text-white" href="{% url "main:about" %}">Про нас</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
@@ -142,7 +142,7 @@
                                                     <div class="col p-0"><strong>100.00 $</strong></div>
                                                     <div class="col p-0">
                                                         <a href="#" class="remove-from-cart" data-cart-id="">
-                                                            <img class="mx-1" src="static/deps/icons/trash3-fill.svg"
+                                                            <img class="mx-1" src="{% static "deps/icons/trash3-fill.svg" %}"
                                                                 alt="Catalog Icon" width="16" height="16">
                                                         </a>
                                                     </div>
