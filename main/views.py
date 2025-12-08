@@ -21,5 +21,15 @@ def about(request):
 
     return render(request, "main/about.html", context)
 
+# база для сторінки "Контактна інформація"
+def contakt(request):
+    context = {
+        "title": "Контактна інформація",
+        "content": "Контактна інформація",
+        "text_on_page": "Все що потрібно ви взнаєте тут Контактна інформація",
+    }
+
+    return render(request, "main/contakt.html", context)
+
 
 # Create your views here.
